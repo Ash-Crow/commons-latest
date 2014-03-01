@@ -105,7 +105,7 @@ if (!class_exists("com_latest")) {
 			$number =$options['pics_number'];
 		}
 		
-		$url="https://toolserver.org/~ash_crow/lastpics/getlastpics.php?category=$category&last=$number";
+		$url="https://tools.wmflabs.org/ash-dev/lastpics/getlastpics.php?category=$category&last=$number";
 		$objects = json_decode($this->remote_get_contents($url),true);
 
 		if(empty($objects)) {
@@ -125,7 +125,7 @@ if (!class_exists("com_latest")) {
 	// Admin-related functions
 	function getAdminOptions() {
 		$com_latestAdminOptions = array(
-			'category_name' => 'Images from Wiki Loves Monuments 2012',
+			'category_name' => 'Featured pictures on Wikimedia Commons',
 			'pics_number' => '20',
 			'width' => '120',
 			'widget_width' => '200',
