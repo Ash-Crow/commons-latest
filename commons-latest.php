@@ -52,6 +52,9 @@ if (!class_exists("com_latest")) {
 		// Return the output instead of displaying it directly
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 		
+		// Pretend to be a browser
+		curl_setopt($ch,CURLOPT_USERAGENT,'Mozilla/4.0 (compatible; MSIE 6.0)');
+		
 		// Execute the curl session
 		$output = curl_exec($ch);
 		
