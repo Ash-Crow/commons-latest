@@ -34,6 +34,7 @@ if (!class_exists("com_latest")) {
 			return $this->curl_get_contents($url);
 		} else {
 			// A litte slower, but (usually) gets the job done
+			ini_set('user_agent','Mozilla/4.0 (compatible; MSIE 6.0)'); // Fix for the error 403
 			return file_get_contents($url);
 		}
 	}
@@ -181,7 +182,6 @@ if (!class_exists("com_latest")) {
 		
 		function initWidget() {
 			register_sidebar_widget(__('Commons last picture','comlatest'), array(&$this, 'widget_comlast'));
-
 		}
 		
 		function shortcode_comlatest($attributes, $initialContent = '') {
