@@ -125,7 +125,7 @@ if (!class_exists("com_latest")) {
 				$list.="<a href=\"".$this->getURL($pic['filename'])."\"><div class=\"thumbnail $height\"><img src=\"".$this->getThumbnail($thumb_width,$pic['filename'],$pic['filetype'])."\" /><span class=\"thumbLegend\">".__('by','comlatest').' '.$pic['author']."</span></div></a>";
 			}
 		}
-		return $url;
+		return $list;
 	}
 
 		
