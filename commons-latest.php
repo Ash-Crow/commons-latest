@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: Commons Latest
-Plugin URI: http://ashtree.eu/wordpress/commons-latest/
+Plugin URI: http://blog.ash.bzh/commons-latest/
 Description: Shows as a gallery the latest pictures from a given Wikimedia Commons Category
-Version: 0.5.0
+Version: 1.0.0
 Author: <a href="http://ashtree.eu">Sylvain Boissel</a>
 Author URI: http://ashtree.eu
 */
@@ -51,6 +51,9 @@ if (!class_exists("com_latest")) {
 		
 		// Return the output instead of displaying it directly
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+
+		// Pretend to be a browser
+		curl_setopt($ch,CURLOPT_USERAGENT,'Mozilla/4.0 (compatible; MSIE 6.0)');
 		
 		// Pretend to be a browser
 		curl_setopt($ch,CURLOPT_USERAGENT,'Mozilla/4.0 (compatible; MSIE 6.0)');
@@ -122,7 +125,7 @@ if (!class_exists("com_latest")) {
 				$list.="<a href=\"".$this->getURL($pic['filename'])."\"><div class=\"thumbnail $height\"><img src=\"".$this->getThumbnail($thumb_width,$pic['filename'],$pic['filetype'])."\" /><span class=\"thumbLegend\">".__('by','comlatest').' '.$pic['author']."</span></div></a>";
 			}
 		}
-		return $list;
+		return $url;
 	}
 
 		
