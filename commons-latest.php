@@ -55,8 +55,6 @@ if (!class_exists("com_latest")) {
 		// Pretend to be a browser
 		curl_setopt($ch,CURLOPT_USERAGENT,'Mozilla/4.0 (compatible; MSIE 6.0)');
 		
-		// Pretend to be a browser
-		curl_setopt($ch,CURLOPT_USERAGENT,'Mozilla/4.0 (compatible; MSIE 6.0)');
 		
 		// Execute the curl session
 		$output = curl_exec($ch);
