@@ -1,9 +1,12 @@
 commons-latest
 ==============
 
+Projet archivé, pas mis à jour depuis des années.
+
 Wordpress plugin, shows a gallery of the latest files uploaded to a given category from Wikimedia Commons.
 
 Commons Latest est un plugin pour WordPress permettant d’afficher les dernières images d’une catégorie donnée de Wikimedia Commons sur une page WordPress ou dans un widget.
+
 
 ## Installation
 
